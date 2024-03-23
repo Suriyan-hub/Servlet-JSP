@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>ServletConfigContext</display-name>
+  <servlet>
+  <servlet-name>user</servlet-name>
+  <servlet-class>com.contextconfig.UserServlet</servlet-class>
+   </servlet>
+  <servlet-mapping>
+  <servlet-name>user</servlet-name>
+  <url-pattern>/username</url-pattern>
+  </servlet-mapping>
+ <servlet>
+  <servlet-name>home</servlet-name>
+  <servlet-class>com.contextconfig.HomeServlet</servlet-class>
+  <init-param>
+  <param-name>name</param-name>
+  <param-value>Grace</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>home</servlet-name>
+  <url-pattern>/userhome</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>name</param-name>
+  <param-value>Suriya</param-value>
+  </context-param>
+  <context-param>
+  <param-name>job</param-name>
+  <param-value>trainer</param-value>
+  </context-param>
+</web-app>
